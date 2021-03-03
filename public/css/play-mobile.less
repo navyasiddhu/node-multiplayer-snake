@@ -1,0 +1,159 @@
+@content-color: #242B00;
+
+.active-game {
+    justify-content: space-evenly;
+    display: flex !important;
+    //flex-direction: column;
+    height: 100%;
+}
+
+.visible-in-game {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+label#register {
+    width: 100%;
+    display: flex;
+    //flex-grow: 1;
+    //min-height: 10%;
+    height: auto;
+}
+
+.player-view .register.top {
+    //position: relative !important;
+    top: 0;
+}
+
+#changePlayerNameButton {
+    color: @content-color;
+    background: transparent;
+    border: 0.2em solid @content-color;
+    border-radius: 0;
+
+    &:active {
+        background: @content-color;
+        color: white;
+    }
+}
+
+div#player-name {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.active-game div#player-name {
+    border-top: 0.2em solid @content-color;
+    border-bottom: 0.2em solid @content-color;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    clear: both;
+    width: 100%;
+    display: block;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    text-align: center;
+    color: @content-color  !important;
+    font-weight: normal;
+}
+
+input#player-name-input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#visibleWhenPlaying {
+    display: none;
+}
+
+#quitGame {
+    color: inherit;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-bottom: 0.2em solid @content-color;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    border-radius: 0;
+}
+
+.player-info-wrapper {
+    display: flex;
+    //min-height: 35%;
+    height: auto;
+    //flex-grow: 1;
+    flex-direction: column;
+
+    & label {
+        font-size: 50%;
+        text-transform: uppercase;
+        display: block;
+        clear: both;
+    }
+
+    & .score-result {
+        font-size: 175%;
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+    }
+}
+
+#playerSettings {
+    //display: flex;
+    min-height: 40%;
+    //height: auto;
+    //flex-grow: 1;
+    flex-direction: column;
+    grid-gap: 0.1em;
+    /*height: 15em;*/
+    grid-template-areas: "a a b b d d""a a b b d d""a a c c d d""a a c c d d";
+}
+
+button.grid-item-button {
+    border: 0.2em solid @content-color;
+    background: transparent;
+    color: @content-color;
+
+    &:active {
+        background: @content-color;
+        color: white;
+    }
+}
+
+#playerViewCanvas {
+    width: 100%;
+    transform: scale(1);
+}
+
+.control-button {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+
+#btnRight span,
+#btnLeft span {
+    writing-mode: tb-rl;
+    text-orientation: upright;
+    letter-spacing: 0.25em;
+}
+
+span#playerNameLabel {
+    display: none !important;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
